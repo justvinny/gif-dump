@@ -27,6 +27,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
     btnEquals.addEventListener("click", function() {
         calculate(fieldResult);
     });
+
+    let test = [];
+    test.push("HellO");
+    test.push("Bye");
+    test.pop();
+    test.unshift("First");
+    test.shift();
+    console.log(test.toString());
 })
 
 function enterNumber(numberBtn, fieldResult) {
