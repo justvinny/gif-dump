@@ -206,6 +206,8 @@ function randomColor() {
     return `rgb(${r},${g},${b})`;
 }
 
+
+
 // setup canvas
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
@@ -223,3 +225,19 @@ window.onresize = () => {
     width = canvas.width = window.innerWidth;
     height = canvas.height = window.innerHeight;
 };
+
+let touchHeld = false;
+canvas.addEventListener("pointerdown", () => {
+    touchHeld = true;
+});
+
+canvas.addEventListener("pointerup", () => {
+    touchHeld = false;
+});
+
+canvas.addEventListener("pointermove", (event) => {
+    if (touchHeld) {
+        evilBall.x = event.clientX;
+        evilBall.y = event.clientY;
+    }
+});
