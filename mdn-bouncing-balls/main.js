@@ -236,8 +236,8 @@ canvas.addEventListener("pointerup", () => {
 });
 
 canvas.addEventListener("pointermove", (event) => {
-    if (touchHeld) {
+    if (touchHeld || event.pointerType === "touch") {
         evilBall.x = event.clientX;
         evilBall.y = event.clientY;
-    }
+    } 
 });
