@@ -1,0 +1,27 @@
+.contactInput {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactInput label {
+    margin-bottom: 5px;
+}
+
+.contactInput button[type="submit"] {
+    width: 4em;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contact p {
+    margin: 5px 0px;
+}
+
+.contact button {
+    height: 1.5em;
+    margin-left: 5px;
+}
